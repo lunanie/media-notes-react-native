@@ -49,7 +49,7 @@ const RecordAudioScreen = ({
         <Button
           textStyle={s.submitText}
           buttonStyle={s.submitButton}
-          title="Continue"
+          title="Salvar"
           onPress={onSubmit}
           disabled={!audioName}
         />

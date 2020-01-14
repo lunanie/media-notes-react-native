@@ -41,7 +41,7 @@ const RecordVideoScreen = ({
 
         <TextInput
           style={s.inputStyle}
-          placeholder="Give a name for your video"
+          placeholder="Digite o nome do seu video"
           value={videoName}
           onChangeText={setVideoName}
           onSubmitEditing={onSubmit}
@@ -54,7 +54,7 @@ const RecordVideoScreen = ({
         <Button
           textStyle={s.submitText}
           buttonStyle={s.submitButton}
-          title="Continue"
+          title="Salvar"
           onPress={onSubmit}
           disabled={!videoName}
         />
@@ -79,7 +79,7 @@ const RecordVideoScreen = ({
               style={s.left}
               onPress={stopRecording}
             >
-              <Text style={s.cancel}> Cancel </Text>
+              <Text style={s.cancel}> Cancelar </Text>
             </TouchableOpacity>)}
 
           <TouchableOpacity

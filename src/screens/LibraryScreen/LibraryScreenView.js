@@ -9,8 +9,8 @@ import { AudioItem, VideoItem } from './components';
 import s from './styles';
 
 const tabs = [
-  'Audio',
-  'Video',
+  'Áudio',
+  'Vídeo',
 ];
 
 const LibraryScreenView = ({
@@ -40,8 +40,8 @@ const LibraryScreenView = ({
             items={audioItems}
             playAudio={playAudio}
             stopPlayingAudio={stopPlayingAudio}
-            noItemsTitle="There are no items yet"
-            noItemsCaption="Your recorded audio will be appear here"
+            noItemsTitle="Não existe nenhum áudio ainda"
+            noItemsCaption="Seus audios irão aparecer aqui"
             ListItem={AudioItem}
             playingAudioId={playingAudio() && playingAudio().id}
             removeAudio={removeAudio}
@@ -65,8 +65,8 @@ const LibraryScreenView = ({
         <MediaList
           items={videoItems}
           onPress={playVideo}
-          noItemsTitle="There are no items yet"
-          noItemsCaption="Your recorded video will be appear here"
+          noItemsTitle="Não existe nenhum vídeo ainda"
+          noItemsCaption="Seus videos irão aparecer aqui"
           ListItem={VideoItem}
           removeVideo={removeVideo}
           rowDirection
