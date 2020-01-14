@@ -1,7 +1,7 @@
 import React from 'react';
 import T from 'prop-types';
 import { AppLoading } from 'expo';
-import { Permissions } from 'expo-permissions'
+import { Permissions } from 'expo-permissions';
 import { BackHandler, View, UIManager } from 'react-native';
 import { Provider } from 'react-redux';
 import {
