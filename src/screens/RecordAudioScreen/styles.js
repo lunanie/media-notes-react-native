@@ -30,14 +30,14 @@ const styles = StyleSheet.create({
     fontSize: 50,
     fontWeight: '300',
   },
-  recordButton: {
-    height: 100,
-    width: 100,
-    borderRadius: 50,
-    backgroundColor: colors.audio.recording,
-    justifyContent: 'center',
-    alignItems: 'center',
-  },
+  // recordButton: {
+  //   height: 100,
+  //   width: 100,
+  //   borderRadius: 100,
+  //   backgroundColor: colors.audio.recording,
+  //   justifyContent: 'center',
+  //   alignItems: 'center',
+  // },
   startRecordButton: {
     marginTop: '25%',
   },
@@ -49,7 +49,11 @@ const styles = StyleSheet.create({
   },
 
   recordIcon: {
-    justifyContent: 'center',
+    color: colors.audio.recording,
+    fontSize: 70,
+    justifyContent: 'flex-end',
+    alignItems: 'flex-end',
+
   },
   cancelCross: {
     position: 'absolute',

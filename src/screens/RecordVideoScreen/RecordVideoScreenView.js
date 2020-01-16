@@ -108,7 +108,7 @@ const RecordVideoScreen = ({
                 <Icon
                   size={62}
                   IconSet={Ionicons}
-                  iconName="ios-reverse-camera-outline"
+                  iconName="ios-reverse-camera"
                 />
               </TouchableOpacity>
             )}
