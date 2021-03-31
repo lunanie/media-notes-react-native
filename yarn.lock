@@ -1801,6 +1801,13 @@ axios@0.16.2:
     follow-redirects "^1.2.3"
     is-buffer "^1.1.5"
 
+"axios@>=0.11.1 <2":
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
+  dependencies:
+    follow-redirects "^1.10.0"
+
 axobject-query@^2.0.2:
   version "2.1.1"
   resolved "https://registry.yarnpkg.com/axobject-query/-/axobject-query-2.1.1.tgz#2a3b1271ec722d48a4cd4b3fcc20c853326a49a7"
@@ -2278,6 +2285,15 @@ clamp@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/clamp/-/clamp-1.0.1.tgz#66a0e64011816e37196828fdc8c8c147312c8634"
   integrity sha1-ZqDmQBGBbjcZaCj9yMjBRzEshjQ=
+
+clarifai@^2.9.1:
+  version "2.9.1"
+  resolved "https://registry.yarnpkg.com/clarifai/-/clarifai-2.9.1.tgz#7dd21c3265de34b557ee3a216cb31e2908c6944c"
+  integrity sha512-xUxl0bNhBTRn93BBjzYG3nQ/BRZI5VcAZOn1hsukTEFgE31grtegztMT26AbFdmWkCJin1dM6TaC4APSHYs/Ug==
+  dependencies:
+    axios ">=0.11.1 <2"
+    promise "^7.1.1"
+    valid-url "^1.0.9"
 
 class-utils@^0.3.5:
   version "0.3.6"
@@ -3174,19 +3190,21 @@ expo-asset@~8.0.0:
     path-browserify "^1.0.0"
     url-parse "^1.4.4"
 
-expo-av@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-8.0.0.tgz#fc892a0e4ff7e1eff630002e0652da3125d18113"
-  integrity sha512-n1qOXi0jk6stY4q5RZqmQS90Rg9HDDGWE7EfLABhcyUA1EGJJbrupjpn75sxzNYMksad+oiGp0NULTHlKfa01A==
+expo-av@^8.0.0:
+  version "8.7.0"
+  resolved "https://registry.yarnpkg.com/expo-av/-/expo-av-8.7.0.tgz#01030256dc75cebd5d02060393ba0ad36c10a7f8"
+  integrity sha512-tYw0z//UZm9THicOsu4w0A7Olq/JauTy7kcBR15Fhyppd9wd8Jtq7QYNtf2igd1R+byS2L0AGwE0nazlbQR+Qw==
   dependencies:
     lodash "^4.17.15"
     nullthrows "^1.1.0"
 
-expo-camera@~8.0.0:
-  version "8.0.0"
-  resolved "https://registry.yarnpkg.com/expo-camera/-/expo-camera-8.0.0.tgz#a0caee7baf1f2013203fe6a4635125ade12ec164"
-  integrity sha512-mtP4NV2R4e+JTXUZBiA0ok4xSzTfRLxirvqJ5T7kjyozuCWUJeOhGk3hqNsBbWhwXDA+hirAge7169UB3vKfDQ==
+expo-camera@^8.0.0:
+  version "8.3.1"
+  resolved "https://registry.yarnpkg.com/expo-camera/-/expo-camera-8.3.1.tgz#e17c080c4aafd71f66495c2b6dfc53dcd31b0368"
+  integrity sha512-weFanDVsJKAbm5g90zWIUD4zVrXKoQq7g2BTg4zy4p24YsGfXKYRH4ja0YRgr3Ci/abGaaRNZjsPMJiNskR+tA==
   dependencies:
+    fbjs "1.0.0"
+    invariant "2.2.4"
     lodash "^4.6.0"
     prop-types "^15.6.0"
 
@@ -3463,12 +3481,13 @@ fbjs-scripts@^1.1.0:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.9:
-  version "0.8.17"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
-  integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
+fbjs@1.0.0, fbjs@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-1.0.0.tgz#52c215e0883a3c86af2a7a776ed51525ae8e0a5a"
+  integrity sha512-MUgcMEJaFhCaF1QtWGnmq9ZDRAzECTCRAF7O6UZIlAlkTs1SasiX9aP0Iw7wfD2mJ7wDTNfg2w7u5fSCwJk1OA==
   dependencies:
-    core-js "^1.0.0"
+    core-js "^2.4.1"
+    fbjs-css-vars "^1.0.0"
     isomorphic-fetch "^2.1.1"
     loose-envify "^1.0.0"
     object-assign "^4.1.0"
@@ -3476,13 +3495,12 @@ fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.9:
     setimmediate "^1.0.5"
     ua-parser-js "^0.7.18"
 
-fbjs@^1.0.0:
-  version "1.0.0"
-  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-1.0.0.tgz#52c215e0883a3c86af2a7a776ed51525ae8e0a5a"
-  integrity sha512-MUgcMEJaFhCaF1QtWGnmq9ZDRAzECTCRAF7O6UZIlAlkTs1SasiX9aP0Iw7wfD2mJ7wDTNfg2w7u5fSCwJk1OA==
+fbjs@^0.8.1, fbjs@^0.8.4, fbjs@^0.8.9:
+  version "0.8.17"
+  resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.17.tgz#c4d598ead6949112653d6588b01a5cdcd9f90fdd"
+  integrity sha1-xNWY6taUkRJlPWWIsBpc3Nn5D90=
   dependencies:
-    core-js "^2.4.1"
-    fbjs-css-vars "^1.0.0"
+    core-js "^1.0.0"
     isomorphic-fetch "^2.1.1"
     loose-envify "^1.0.0"
     object-assign "^4.1.0"
@@ -3591,6 +3609,11 @@ flat-cache@^1.2.1:
     graceful-fs "^4.1.2"
     rimraf "~2.6.2"
     write "^0.2.1"
+
+follow-redirects@^1.10.0:
+  version "1.13.3"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.13.3.tgz#e5598ad50174c1bc4e872301e82ac2cd97f90267"
+  integrity sha512-DUgl6+HDzB0iEptNQEXLx/KhTmDb8tZUHSeLqpnjpknR70H0nC2t9N73BK6fN4hOvJ84pKlIQVQ4k5FFlBedKA==
 
 follow-redirects@^1.2.3:
   version "1.9.0"
@@ -4130,7 +4153,7 @@ instapromise@^2.0.7:
   resolved "https://registry.yarnpkg.com/instapromise/-/instapromise-2.0.7.tgz#85e66b31021194da11214c865127ef04ec30167a"
   integrity sha1-heZrMQIRlNoRIUyGUSfvBOwwFno=
 
-invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
+invariant@2.2.4, invariant@^2.2.0, invariant@^2.2.2, invariant@^2.2.4:
   version "2.2.4"
   resolved "https://registry.yarnpkg.com/invariant/-/invariant-2.2.4.tgz#610f3c92c9359ce1db616e538008d23ff35158e6"
   integrity sha512-phJfQVBuaJM5raOpJjSfkiD6BpbCE4Ns//LaXl6wGYtUBY83nWS6Rf9tXm2e8VaK60JEjYldbPif/A2B1C2gNA==
@@ -6111,6 +6134,13 @@ react-lifecycles-compat@^3.0.0:
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
   integrity sha512-fBASbA6LnOU9dOU2eW7aQ8xmYBSXUIWr+UmF9b1efZBazGNO+rcXT/icdKnYm2pTwcRylVUYwW7H1PHfLekVzA==
 
+react-native-camera@^3.15.1:
+  version "3.43.1"
+  resolved "https://registry.yarnpkg.com/react-native-camera/-/react-native-camera-3.43.1.tgz#26758ed66a63ea87a8bb25361364034419c60043"
+  integrity sha512-hglDMBpJyqxwlyElYjeY5zTj838P5LWUQcOpcO8zKh+w6waPyDi1F4vUd/5KHjQ4hPt0xJXXYuxo0IRGo5hyHQ==
+  dependencies:
+    prop-types "^15.6.2"
+
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
@@ -7732,6 +7762,11 @@ uuid@^3.0.0, uuid@^3.0.1, uuid@^3.1.0, uuid@^3.2.1, uuid@^3.3.2:
   resolved "https://registry.yarnpkg.com/uuid/-/uuid-3.3.3.tgz#4568f0216e78760ee1dbf3a4d2cf53e224112866"
   integrity sha512-pW0No1RGHgzlpHJO1nsVrHKpOEIxkGg1xB+v0ZmdNH5OAeAwzAVrCnI2/6Mtx+Uys6iaylxa+D3g4j63IKKjSQ==
 
+valid-url@^1.0.9:
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/valid-url/-/valid-url-1.0.9.tgz#1c14479b40f1397a75782f115e4086447433a200"
+  integrity sha1-HBRHm0DxOXp1eC8RXkCGRHQzogA=
+
 validate-npm-package-license@^3.0.1:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/validate-npm-package-license/-/validate-npm-package-license-3.0.4.tgz#fc91f6b9c7ba15c857f4cb2c5defeec39d4f410a"
@@ -7985,9 +8020,9 @@ xtend@~4.0.1:
   integrity sha512-LKYU1iAXJXUgAXn9URjiu+MWhyUXHsvfp7mcuYm9dSUKK0/CjtrUwFAxD82/mCWbtLsGjFIad0wIsod4zrTAEQ==
 
 y18n@^3.2.1:
-  version "3.2.1"
-  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.1.tgz#6d15fba884c08679c0d77e88e7759e811e07fa41"
-  integrity sha1-bRX7qITAhnnA136I53WegR4H+kE=
+  version "3.2.2"
+  resolved "https://registry.yarnpkg.com/y18n/-/y18n-3.2.2.tgz#85c901bd6470ce71fc4bb723ad209b70f7f28696"
+  integrity sha512-uGZHXkHnhF0XeeAPgnKfPv1bgKAYyVvmNL1xlKsPYZPaIHxGti2hHqvOCQv71XMsLxu1QjergkqogUnms5D3YQ==
 
 "y18n@^3.2.1 || ^4.0.0", y18n@^4.0.0:
   version "4.0.0"
