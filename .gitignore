@@ -3,3 +3,9 @@ node_modules/**/*
 npm-debug.*
 .DS_Store
 .idea/*
+*.lock
+*-lock.json
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
